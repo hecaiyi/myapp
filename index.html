@@ -1,194 +1,131 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-	 <!--头部-->
-    <header id="header" class="mui-bar mui-bar-nav">
-        <h1 id="title" class="mui-title">APP</h1>
-    </header>
-    
-    <!--  主体内容    -->
-    <div class="mui-content">
-	  <!--<ul class="mui-table-view mui-grid-view mui-grid-9" id="imgPop">
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#" id="font-size">
-	            <img src="img/pic8.jpg" />
-	            <div class="mui-media-body">微信</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic15.jpg" />
-	            <div class="mui-media-body">QQ</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic13.jpg" />
-	            <div class="mui-media-body">音乐</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic9.jpg" />
-	            <div class="mui-media-body">App Store</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic14.jpg" />
-	            <div class="mui-media-body">WFIF</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic12.jpg" />
-	            <div class="mui-media-body">Andriod</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic11.jpg" />
-	            <div class="mui-media-body">电话</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic10.jpg" />
-	            <div class="mui-media-body">相机</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic16.jpg" />
-	            <div class="mui-media-body">有妖气</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic15.jpg" />
-	            <div class="mui-media-body">QQ</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic13.jpg" />
-	            <div class="mui-media-body">音乐</div>
-	        </a>
-	    </li>
-	    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-	        <a href="#">
-	            <img src="img/pic9.jpg" />
-	            <div class="mui-media-body">App Store</div>
-	        </a>
-	    </li>
-	  </ul>-->
-      
-      <ul class="mui-table-view" id="box">
-          <li class="mui-table-view-cell mui-media"
-          	v-for="(item, index) in list"
-          	:key="index"
-          	:type="item.type"
-          	:name="item.realName">
-          	      <span class="mui-badge mui-badge-success">22</span>
-                  <img class="mui-media-object mui-pull-left" :src="item.avatarUrl">
-                  <div class="mui-media-body">
-                     {{ item.city }}
-                      
-                      <p class="mui-ellipsis">{{ item.realName }}</p>
-                  </div>
-          </li>
-          <!--<li class="mui-table-view-cell mui-media">
-              <a href="javascript:;">
-                  <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-                  <div class="mui-media-body">
-                      木屋
-                      <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
-                  </div>
-              </a>
-          </li>
-          <li class="mui-table-view-cell mui-media">
-              <a href="javascript:;">
-                  <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
-                  <div class="mui-media-body">
-                      CBD
-                      <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
-                  </div>
-              </a>
-          </li>-->
-      </ul>
-      
-    </div>
-    
-    <!--  底部      -->
-    <nav class="mui-bar mui-bar-tab">
-        <a class="mui-tab-item mui-active">
-            <span class="mui-icon mui-icon-home"></span>
-            <span class="mui-tab-label">首页</span>
-        </a>
-        <a class="mui-tab-item">
-            <span class="mui-icon mui-icon-phone"></span>
-            <span class="mui-tab-label">分类</span>
-        </a>
-        <a class="mui-tab-item">
-            <span class="mui-icon mui-icon-email"></span>
-            <span class="mui-tab-label">邮件</span>
-        </a>
-        <a class="mui-tab-item">
-            <span class="mui-icon mui-icon-gear"></span>
-            <span class="mui-tab-label">设置</span>
-        </a>
-    </nav>
-    
-    <script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
-    <script src="js/kind.js"></script>
-    <script type="text/javascript">
-    mui.init()
-    
-    var gallery = mui('.mui-slider');
-	gallery.slider({
-	  interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
-	});
-	
-    mui.get('')
-	
-	var box = new Vue({
-		el: '#box',
-		data: {
-			list: []
-		},
-		
-		methods: {
-		    getList: function () {
-		      var that = this;
-		      
-		      mui.get('http://route.showapi.com/126-2', {
-		        showapi_appid: 79062,
-		        showapi_sign: 'cd403c88b63d4f04908edb88c4e7a670'
-		      }, function (result) {
-//		      	console.log(result)
-		        if (result.showapi_res_code === 0) {
-		          that.list = result.showapi_res_body.pagebean.contentlist;
-		        } else {
-		          mui.toast(result.showapi_res_error);
-		        }
-		      })
-		    }
-		  },
-		created: function () {
-		   this.getList();
-		}
-	})
-	
-    </script>
-    
-</body>
-</html>
 
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<!--头部-->
+		<header id="header" class="mui-bar mui-bar-nav">
+			<h1 id="title" class="mui-title">APP</h1>
+		</header>
+
+		<!--  主体内容    -->
+		<div class="mui-content">
+		
+			<ul class="mui-table-view" id="box">
+				<li class="mui-table-view-cell mui-media" v-for="(item, index) in list" :key="index" :type="item.type" :name="item.realName">
+					<span class="mui-badge mui-badge-success">22</span>
+					<img class="mui-media-object mui-pull-left" :src="item.avatarUrl">
+					<div class="mui-media-body">
+						{{ item.city }}
+
+						<p class="mui-ellipsis">{{ item.realName }}</p>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+
+		<!--  底部      -->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label">邮件</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>
+
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+		<script src="js/kind.js"></script>
+		<script type="text/javascript">
+			
+//		mui.plusReady(function(){
+            mui.init({
+			  pullRefresh : {
+			    container:"#box",
+			    down : {
+			      style:'circle',//必选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+			      color:'#2BD009', //可选，默认“#2BD009” 下拉刷新控件颜色
+			      height:'50px',//可选,默认50px.下拉刷新控件的高度,
+			      range:'200px', //可选 默认100px,控件可下拉拖拽的范围
+			      offset:'100px', //可选 默认0px,下拉刷新控件的起始位置
+			      auto: false,//可选,默认false.首次加载自动上拉刷新一次
+			      callback: pullfreshList //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+			    },
+			    up : {
+			      height:50,//可选.默认50.触发上拉加载拖动距离
+			      auto:false,//可选,默认false.自动上拉加载一次
+			      contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+			      contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+			      callback :pullfreshUp //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+    }
+			  }
+			});
+			
+		  function pullfreshList (){
+			console.log(1111)
+		  }
+		  function pullfreshUp () {
+		  	console.log(2222)
+		  }
+				
+//      });
+			
+				
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+				interval: 1000 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+
+			mui.get('')
+
+			var box = new Vue({
+				el: '#box',
+				data: {
+					list: []
+				},
+
+				methods: {
+					getList: function() {
+						var that = this;
+
+						mui.get('http://route.showapi.com/126-2', {
+							showapi_appid: 79062,
+							showapi_sign: 'cd403c88b63d4f04908edb88c4e7a670'
+						}, function(result) {
+							//		      	console.log(result)
+							if(result.showapi_res_code === 0) {
+								that.list = result.showapi_res_body.pagebean.contentlist;
+							} else {
+								mui.toast(result.showapi_res_error);
+							}
+						})
+					}
+				},
+				created: function() {
+					this.getList();
+				}
+			})
+		</script>
+
+	</body>
+
+</html>

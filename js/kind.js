@@ -1,7 +1,7 @@
 mui.plusReady(function() {
-	console.log(11111)
+//	console.log(11111)
 	mui('.mui-bar').on('tap', '.mui-active', function() {
-		console.log(22222)
+//		console.log(22222)
 		mui.openWindow({
 			url: 'kind.html',
 			id: 'kind.html',
@@ -31,7 +31,7 @@ var listNav = new Vue({
 		        showapi_appid: 79062,
 		        showapi_sign: 'cd403c88b63d4f04908edb88c4e7a670'
 		      }, function (result) {
-		      	console.log(result)
+//		      	console.log(result)
 		      })
 		}
 	},
