@@ -1,0 +1,22 @@
+#header {
+  background-color: #FF6666;
+}
+#header h1 {
+	color: #fff;
+}
+#listNav {
+	background-color: pink;
+	border: 0;
+}
+#listNav li {
+	
+}
+.mui-table-view-cell:after {
+	position: absolute; right: 100%;
+}
+.mui-content > .mui-table-view:first-child {
+	margin-top: 0;
+}
+.mui-table-view {
+	width: 80px;
+}
